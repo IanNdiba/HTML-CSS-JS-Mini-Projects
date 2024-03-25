@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 200px;
+  width: 200px;
+  position: relative;
+  margin-top: 100px;
+}
+
+.value {
+  position: absolute;
+  font-size: 38px;
+  color: crimson;
+  top: 80px;
+  left: 750px;
+}
