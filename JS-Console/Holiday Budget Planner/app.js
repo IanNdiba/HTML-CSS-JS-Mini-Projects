@@ -12,3 +12,8 @@ function calculateCost(hotelPrice, duration, ticketPrice, budget) {
   }
   return result;
 }
+
+// const listsCase = document.querySelectorAll(".lists");
+// listsCase.forEach((list) => {
+//   list.innerHTML = list.innerHTML.toUpperCase();
+// });

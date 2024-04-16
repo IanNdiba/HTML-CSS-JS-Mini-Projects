@@ -1,33 +1,16 @@
-const nums = [10, 30, 50, 70, 90];
+let mexico = {
+  id: 24,
+  name: "Mexico",
+  capital: "Mexico City",
+  neighbours: ["USA", "Guatemala", "Belize"],
+};
 
-const squares = nums.map((num) => {
-  return num * num;
-});
+console.log(mexico);
 
-const over1000 = squares.filter((square) => {
-  return square > 1000;
-});
+mexico.id = 25;
+mexico.neighbours.push("Honduras");
 
-const finale = over1000.reduce((acc, num) => {
-  return acc + num;
-}, 0);
+console.log(mexico);
 
-console.log(nums);
-console.log(squares);
-console.log(over1000);
-console.log(finale);
-
-console.log("-----------------------------");
-
-const numbs = [10, 30, 50, 70, 90]
-  .map((num) => {
-    return num * num;
-  })
-  .filter((square) => {
-    return square > 1000 ? true : false;
-  })
-  .reduce((acc, num) => {
-    return acc + num;
-  }, 0);
-
-console.log(numbs);
+const mexico2 = new Map(mexico);
+console.log(mexico2);
