@@ -1,24 +1,30 @@
-console.log("Program Started");
-
-const myPromise = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve({ data: "Hello", error: null });
-  }, 5000);
-});
-
-console.log(myPromise);
-console.log("Program in progress...");
-
-myPromise
-  .then((value) => {
-    console.log(value);
-
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve("First promise chain completed");
-      }, 2000);
-    });
-  })
-  .then((value) => {
-    console.log(value);
+const fetchUser = async () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve({
+        data: {
+          user: "Monkey",
+          admin: true,
+        },
+      });
+    }, 3000);
   });
+};
+
+const login = (object) => {
+  if (object.admin === true) {
+    console.log("Successfully Logged In!");
+  }
+  return "Failed to login in. Please try again..";
+};
+
+console.log("Program Starting");
+
+const dataFetch = async () => {
+  const data = await fetchUser();
+  login(data.data);
+};
+
+dataFetch();
+
+console.log("Program Complete");
