@@ -1,30 +1,9 @@
-const fetchUser = async () => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve({
-        data: {
-          user: "Monkey",
-          admin: true,
-        },
-      });
-    }, 3000);
-  });
+const fakeArray = {
+  0: "Zero",
+  1: "One",
+  2: "Two",
+  length: 3,
+  __proto__: Array.prototype,
 };
 
-const login = (object) => {
-  if (object.admin === true) {
-    console.log("Successfully Logged In!");
-  }
-  return "Failed to login in. Please try again..";
-};
-
-console.log("Program Starting");
-
-const dataFetch = async () => {
-  const data = await fetchUser();
-  login(data.data);
-};
-
-dataFetch();
-
-console.log("Program Complete");
+const map = fakeArray.map((entries) => console.log(entries));
