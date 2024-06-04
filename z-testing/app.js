@@ -1,9 +1,9 @@
-const fakeArray = {
-  0: "Zero",
-  1: "One",
-  2: "Two",
-  length: 3,
-  __proto__: Array.prototype,
-};
+const div = document.createElement("div");
+div.textContent = "This is a div";
+div.style.backgroundColor = "salmon";
+div.style.margin = "auto";
+div.style.height = "200px";
+div.style.width = "200px";
+div.style.alignContent = "center";
 
-const map = fakeArray.map((entries) => console.log(entries));
+document.body.append(div);
