@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#editor {
+  height: 300px;
+  width: 700px;
+  margin-top: 5px;
+  border: 2px solid black;
+}
